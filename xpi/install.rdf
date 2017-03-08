@@ -4,7 +4,7 @@
      xmlns:em="http://www.mozilla.org/2004/em-rdf#">
 
   <Description about="urn:mozilla:install-manifest">
-    <em:id>{c6448328-31f7-4b12-a2e0-5c39d0290307}</em:id>
+    <em:id>htitle@barkhorn.github.io</em:id>
     <em:type>2</em:type>
     <em:name>HTitle</em:name>
     <em:version>3.4</em:version>
@@ -23,7 +23,7 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>29.0</em:minVersion>
-        <em:maxVersion>52</em:maxVersion>
+        <em:maxVersion>*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>
