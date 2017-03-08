@@ -9,39 +9,11 @@
     <em:name>HTitle</em:name>
     <em:version>@VERSION@</em:version>
     <em:description>Hide title bar if window is maximized (like GNOME 3).</em:description>
-    <em:homepageURL>https://github.com/seleznev/firefox-extension-htitle</em:homepageURL>
-    <em:creator>Aleksandr Seleznev</em:creator>
+    <em:homepageURL>https://github.com/barkhorn/firefox-extension-htitle</em:homepageURL>
+    <em:creator>barkhorn</em:creator>
 
     <em:optionsURL>chrome://htitle/content/options.xul</em:optionsURL>
     <em:optionsType>2</em:optionsType>
-
-    <em:localized>
-      <Description em:locale="cs">
-        <em:name>HTitle</em:name>
-        <em:description>Skrývá záhlaví okna, pokud je okno maximalizované (např. v GNOME 3).</em:description>
-      </Description>
-    </em:localized>
-
-    <em:localized>
-      <Description em:locale="pl">
-        <em:name>HTitle</em:name>
-        <em:description>Ukrywa pasek tytułowy, kiedy okno jest zmaksymalizowane (jak w środowisku GNOME 3).</em:description>
-      </Description>
-    </em:localized>
-
-    <em:localized>
-      <Description em:locale="ru">
-        <em:name>HTitle</em:name>
-        <em:description>Скрывает заголовок у развернутого на весь экран окна (в стиле приложений GNOME 3).</em:description>
-      </Description>
-    </em:localized>
-
-    <em:localized>
-      <Description em:locale="uk">
-        <em:name>HTitle</em:name>
-        <em:description>Прибирає заголовок у розгорнутого на весь екран вікна (в стилі програм GNOME 3).</em:description>
-      </Description>
-    </em:localized>
 
     <em:targetPlatform>Linux</em:targetPlatform>
     <em:targetPlatform>FreeBSD</em:targetPlatform>
@@ -51,27 +23,8 @@
       <Description>
         <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
         <em:minVersion>29.0</em:minVersion>
-        <em:maxVersion>39.0a1</em:maxVersion>
+        <em:maxVersion>52</em:maxVersion>
       </Description>
     </em:targetApplication>
-
-    <!-- Thunderbird -->
-    <em:targetApplication>
-      <Description>
-        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
-        <em:minVersion>24.0</em:minVersion>
-        <em:maxVersion>39.0a1</em:maxVersion>
-      </Description>
-    </em:targetApplication>
-
-    <!-- SeaMonkey -->
-    <em:targetApplication>
-      <Description>
-        <em:id>{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}</em:id>
-        <em:minVersion>2.26</em:minVersion>
-        <em:maxVersion>2.36a1</em:maxVersion>
-      </Description>
-    </em:targetApplication>
-
   </Description>
 </RDF>
