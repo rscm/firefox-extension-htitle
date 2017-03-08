@@ -1,17 +1,9 @@
-%if 0
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
-%endif
-%
-%filter substitution
-%
-%if defined(FIREFOX) || defined(SEAMONKEY)
-%define mainWindow #main-window
-%elifdef THUNDERBIRD
-%define mainWindow #messengerWindow
-%endif
-%
+
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
 /*** Box for restore window ***/
 
 #htitle-overlay-box {
@@ -69,9 +61,32 @@
   width: 20px;
 }
 
-@mainWindow@[sizemode="normal"][hidechrome="true"] #htitle-overlay-box {
+#main-window[sizemode="normal"][hidechrome="true"] #htitle-overlay-box {
   opacity: 1;
   visibility: visible;
   transition: visibility 0ms, opacity 300ms ease-out;
   transition-delay: 2s;
+}
+
+/*** Padding for tabs bar ***/
+
+#main-window[htitlemode] #toolbar-menubar[autohide="true"] ~ #TabsToolbar:not([tabsontop="false"]) {
+  padding-top: 2px;
+}
+
+/*** ***/
+
+#main-window:not([customizing]) #toolbar-menubar:not([autohide="true"]),
+#main-window:not([customizing]) #TabsToolbar:not([tabsontop="false"]),
+#main-window:not([customizing]) #nav-bar[tabsontop="false"] {
+  -moz-binding: url(chrome://browser/content/customizableui/toolbar.xml#toolbar-drag);
+}
+
+/*** Popup menu ***/
+
+#main-window[sizemode="normal"] #htitle-menuitem-unmaximize,
+#main-window[sizemode="maximized"] #htitle-menuitem-maximize,
+#main-window[sizemode="fullscreen"] #htitle-menuitem-unmaximize,
+#main-window[sizemode="fullscreen"] #htitle-menuitem-maximize {
+  display: none;
 }
